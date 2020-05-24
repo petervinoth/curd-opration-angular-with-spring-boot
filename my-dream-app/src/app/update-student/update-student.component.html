@@ -1,0 +1,35 @@
+<div class="container-fluid mt-2 p-5">
+    <div class="row">
+      <div class="col-6  jumbotron">
+          <h1>Update Student</h1>
+         
+        <form  (ngSubmit)="onSubmit()" autocomplete="off">
+          <div class="form-group">
+            <label for="email">Name</label>
+            <input type="text" [(ngModel)]="student.name" class="form-control" placeholder="name" id="name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="pwd">age:</label>
+            <input type="text"  [(ngModel)]="student.age" class="form-control" placeholder="age" id="age" name="age">
+          </div>
+          <div class="form-group">
+            <label for="pwd">course:</label>
+            <input type="text" class="form-control" [(ngModel)]="student.course" placeholder="course" id="course" name="course">
+          </div>
+          <div class="form-group">
+            <label for="pwd">city:</label>
+            <input type="text" class="form-control" placeholder="city" id="age" [(ngModel)]="student.city" name="city">
+          </div>
+          <div class="form-group">
+            <label for="pwd">college:</label>
+            <input type="text" class="form-control" placeholder="college" id="college" [(ngModel)]="student.college" name="college">
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button><br><br>
+        </form>
+        <button type="submit" class="btn btn-warning" (click)="back()">Back</button>
+      </div>
+      
+      <div class="col-6">table</div>
+    </div>
+  </div>

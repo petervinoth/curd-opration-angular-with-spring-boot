@@ -1,0 +1,45 @@
+<!--<form  (ngSubmit)="onSubmit()" autocomplete="off">
+  <div class="row">
+  <div class="form-group">
+    <label for="email">Course</label>
+    <input type="text" [(ngModel)]="studentlist.course" class="form-control" placeholder="name" id="course" name="course">
+    <button class="btn btn-success" (click)="search(studentlist.course)">Search</button>
+  </div>
+</div>
+</form>-->
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Student List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>City</th>
+            <th>college</th>
+            <th>edit</th>
+            <th>Details</th>
+            <th>Delete</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let students of studentlist">
+            <td>{{students.name}}</td>
+            <td>{{students.age}}</td>
+            <td>{{students.course}}</td>
+            <td>{{students.city}}</td>
+            <td>{{students.college}}</td>
+            <td><button (click)="updateStuent(students.id)" class="btn btn-danger">Edit</button></td>
+            <td><button (click)="deatils(students.id)" class="btn btn-primary">Details</button>    </td>
+            <td><button  (click)="deleteStudent(students.id)" class="btn btn-info"  style="margin-left: 10px">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
